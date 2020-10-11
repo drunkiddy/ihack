@@ -1,0 +1,50 @@
+{
+  "name": "Amazon relay",
+  "version": "0.1",
+  "description": "Relay Auto Booker",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.relay.amazon.com/*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "libs/jquery-3.4.1.min.js",
+        "src/refreshController.js",
+        "src/orderController.js",
+        "src/ui.js",
+        "src/main.js"
+      ]
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "web_accessible_resources": [
+    "sounds/*.mp3"
+  ],
+  "manifest_version": 2
+}

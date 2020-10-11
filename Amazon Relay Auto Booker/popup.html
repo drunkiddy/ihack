@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+          href="https://github.com/drunkiddy/amazonrelaybooker/blob/master/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Popup</title>
+    <link rel="stylesheet" href="libs/jquery-ui.min.css">
+    <style>
+
+        #custom-handle {
+            width: 1.9em;
+            height: 1.5em;
+            top: 50%;
+            margin-top: -.7em;
+            text-align: center;
+            line-height: 1.5em;
+        }
+
+        #slider {
+            margin: 10px;
+        }
+
+        #btnPlayPause {
+            width: 100%;
+        }
+    </style>
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <script src="libs/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="content" style="height:180px; width:235px; padding: 5px;">
+        <button id="btnPlayPause">Start</button>
+        <br>
+        <div>
+            User: <input id="userName" style="width:125px;">
+            <button id="btnLogin">Log In</button>
+        </div>
+
+        <br>
+        Duration:
+        <div id="slider">
+            <div id="custom-handle" class="ui-slider-handle"></div>
+        </div>
+        <div>
+            <input type="checkbox" id="checkVisualNotification" checked>
+            <label>Notification</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkAutoBook" checked>
+            <label>Book</label>
+        </div>
+        <div>
+            <label>Patch Version by https://t.me/c8lone Drugkeeper</label>
+        </div>
+    </div>
+    <script src="src/popup.js"></script>
+</body>
+</html>
